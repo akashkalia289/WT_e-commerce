@@ -1,0 +1,19 @@
+Color:	Black
+Pattern Type:	Plain
+Length:	Long
+Type:	Cargo Pants
+Details:	Pocket
+Fit Type:	Skinny
+Waist Line:	Natural
+Sheer:	No
+Closure Type:	Zipper Fly
+Material:	Denim
+Composition:	90% Cotton, 10% Spandex
+Fabric:	Slight Stretch
+Care Instructions:	Hand wash,do not dry clean
+
+product name: Guys Solid Cargo Jeans
+
+product desc:Signature by Levi Strauss & Co. Gold Label Mens Regular Fit Jeans Jeans
+
+price: $29

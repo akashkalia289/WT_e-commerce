@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clothing</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="./images/dark-logo.png" width="100" height="80" alt="Clothing Logo">
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./category.html?cat=men" class="nav-link">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./category.html?cat=women" class="nav-link">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./category.html?cat=boys" class="nav-link">Boys</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./category.html?cat=girls" class="nav-link">Girls</a>
+                    </li>
+                    <li class="nav-item" id="login-link">
+                        <a href="./sign-in.html" class="nav-link">Login/Sign up</a>
+                    </li>
+                    <li class="nav-item dropdown" id="user-link">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><button class="dropdown-item" id="logout-btn">Logout</a></button>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5" style="height: 80vh;">
+        <h4 class="my-3"> Shopping Cart </h4>
+        <div class="list-group" id="cart-items">
+            <div class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                <img src="./images/categories/men's/jeans/blue-bootcut_price_$38.jpg" alt="twbs" width="100"
+                    height="100" class="flex-shrink-0 mx-5">
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div>
+                        <h6 class="mb-0">List group item heading</h6>
+                        <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                    </div>
+                    <div>
+                        <h6 class="mb-0">List group item heading</h6>
+                        <small class="opacity-50 text-nowrap">now</small>
+                    </div>
+                    <div>
+                        <h6 class="mb-0">List group item heading</h6>
+                        <small class="opacity-50 text-nowrap">now1</small>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="float-right py-3" id="total-price">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="float-right py-3">
+                    <button class="btn btn-outline-primary" id="checkout-btn">Proceed to checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="main-footer" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 ml-auto">
+                    <a href="./contact.html" class="nav-link">
+                        <p class="lead">Contact Us
+                        </p>
+                    </a>
+                </div>
+                <div class="col-md-6 ml-auto">
+                    <p class="lead">
+                        Copyright &copy; 2021
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module">
+        import { load_shopping_cart, removeCartItem, proceed_to_checkout } from './js/custom/shopping-cart/shopping-cart.js';
+
+        document.body.onload = load_shopping_cart();
+        document.querySelectorAll('button.btn.btn-danger').forEach((btn, index) => {
+            btn.addEventListener('click', () => removeCartItem(index));
+        });
+        document.getElementById('checkout-btn').addEventListener('click', () => proceed_to_checkout());
+    </script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="./libs/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
+    <script src="js/navbar-fixed.js"></script>
+    <script type="module">
+        import { logout } from './js/custom/sign-in-up/sign-in-up.js';
+        document.getElementById('logout-btn').addEventListener('click', () => logout());
+    </script>
+    <script type="module">
+        import { show_user } from './js/custom/user/user.js';
+        document.getElementById('user-link').onload = show_user();
+    </script>
+</body>
+
+</html>
