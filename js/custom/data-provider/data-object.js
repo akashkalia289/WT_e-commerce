@@ -1,3 +1,4 @@
+//raw json data
 const dataObject = {
     men: {
         title: 'Men',

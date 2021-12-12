@@ -1,6 +1,7 @@
 import dataObject from '../data-provider/data-object.js';
 import {$} from './../helpers.js';
 
+// to display categories
 export function loadCategory() {
     const selectedCat = String(new URLSearchParams(window.location.search).get('cat'));
     const categoryObject = dataObject[selectedCat]['categories'];
@@ -62,6 +63,7 @@ export function loadCategory() {
     htmlElement.innerHTML = htmlString;
 }
 
+//show carosuel
 function loadCarosuel(carItems) {
     const {path} = carItems;
     const {pictures} = carItems;

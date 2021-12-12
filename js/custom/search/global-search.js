@@ -1,6 +1,8 @@
 import dataObject from './../data-provider/data-object.js';
 import { $ } from './../helpers.js';
 
+//todo
+//global search implementation
 export function global_search() {
     const data_object = dataObject;
     const searchValue = String($('search-inpt').value).toLowerCase();

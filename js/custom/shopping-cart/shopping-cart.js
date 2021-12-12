@@ -1,5 +1,6 @@
 import { $, get_image_path_for_a_type, get_local_storage_object, get_product, save_object_to_local_storage } from './../helpers.js';
 
+// to display the shopping cart 
 export function load_shopping_cart() {
     const master_obj = get_local_storage_object();
     const shopping_cart_items = {}
@@ -8,6 +9,7 @@ export function load_shopping_cart() {
         const cart_items = master_obj['cart'];
         if (cart_items.length > 0) {
             let cartItemsHTML = '';
+            //rendering each cart item using info in cart_items object
             cart_items.forEach((item, index) => {
                 shopping_cart_items[item.productId] = {
                     quantity: item.quantity,
@@ -56,6 +58,7 @@ export function load_shopping_cart() {
     }
 }
 
+// to remove the items from the cart
 export function removeCartItem(index) {
     const master_obj = get_local_storage_object();
     const cart_items = master_obj['cart'];

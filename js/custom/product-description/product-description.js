@@ -1,6 +1,7 @@
 import dataObject from '../data-provider/data-object.js';
 import { $, create_cart_item, get_local_storage_object, get_product, save_object_to_local_storage } from '../helpers.js';
 
+// to show profuct in the product details page
 export function load_product() {
     const selectedCat = String(new URLSearchParams(window.location.search).get('cat'));
     const selectedType = String(new URLSearchParams(window.location.search).get('type'));
@@ -31,6 +32,7 @@ export function load_product() {
     $('product-details').innerHTML = product_details;
 }
 
+//increase-decrease items in the cart
 export function manipulate_quantity(action) {
     let quantity = Number($('quantity').value);
     if (action === 'decrease' && Number(quantity) > 1) {
@@ -42,6 +44,7 @@ export function manipulate_quantity(action) {
     }
 }
 
+//adding items to the cart 
 export function add_to_cart() {
     const master_obj = get_local_storage_object();
     const selectedCat = String(new URLSearchParams(window.location.search).get('cat'));
