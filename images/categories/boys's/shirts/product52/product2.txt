@@ -1,0 +1,20 @@
+Color:	Multicolor
+Style:	Vacation
+Pattern Type:	Striped, Colorblock
+Details:	Button Front
+Length:	Regular
+Season:	Summer
+Type:	Shirt
+Fit Type:	Regular Fit
+Neckline:	Lapel
+Sleeve Length:	Short Sleeve
+Sleeve Type:	Regular Sleeve
+Size Fit:	This style is more fitted. For a looser fit, size up.
+Sheer:	No
+Placket Type:	Placket
+Material:	Polyester
+Composition:	92% Polyester, 8% Elastane
+Fabric:	Non-Stretch
+Care Instructions:	Machine wash, do not dry clean,wash with the soft detergent
+
+Price: $25

@@ -1,0 +1,17 @@
+Style:	Casual
+Color:	Camel
+Pattern Type:	Striped
+Length:	Regular
+Season:	Summer
+Fit Type:	Regular Fit
+Neckline:	Round Neck
+Sleeve Length:	Short Sleeve
+Sleeve Type:	Regular Sleeve
+Sheer:	No
+Placket Type:	Pullovers
+Material:	Polyester
+Composition:	65% Polyester, 35% Viscose
+Fabric:	Slight Stretch
+Care Instructions:	Machine wash, do not dry clean
+
+Price: $19

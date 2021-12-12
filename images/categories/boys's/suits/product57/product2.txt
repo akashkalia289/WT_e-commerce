@@ -1,0 +1,18 @@
+Color:	Khaki
+Style:	Work
+Pattern Type:	Plaid
+Details:	Button
+Season:	Spring/Fall
+Top Type:	Blazer
+Bottom Type:	Pants
+Neckline:	Lapel
+Sleeve Length:	Long Sleeve
+Sleeve Type:	Regular Sleeve
+Fit Type:	Regular Fit
+Fabric:	Non-Stretch
+Material:	Polyester
+Composition:	80% Polyester, 20% Cotton
+Care Instructions:	Machine wash or professional dry clean
+Sheer:	No
+
+Price: $89

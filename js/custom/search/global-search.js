@@ -8,7 +8,7 @@ export function global_search() {
     Object.keys(dataObject).forEach((cat) => {
         if (data_object[cat]['categories']) {
             data_object[cat]['categories'].forEach((type) => {
-                searchResult[type['title']] = type['products'].filter((product) => {
+                searchResult[data_object[cat]['title'] + '~' + type['title']] = type['products'].filter((product) => {
                     return String(product.title).toLowerCase().includes(searchValue) || String(product.short_desc).toLowerCase().includes(searchValue)
                 });
             })

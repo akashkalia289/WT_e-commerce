@@ -1,0 +1,19 @@
+Color:	Khaki
+Style:	Preppy
+Pattern Type:	Plaid
+Details:	Button Front
+Length:	Regular
+Season:	Spring/Fall
+Type:	Shirt
+Fit Type:	Regular Fit
+Neckline:	Collar
+Sleeve Length:	Long Sleeve
+Sleeve Type:	Regular Sleeve
+Sheer:	No
+Placket Type:	Placket
+Material:	Cotton
+Composition:	50% Cotton, 50% Polyester
+Fabric:	Non-Stretch
+Care Instructions:	Machine wash or professional dry clean
+
+Price: $30

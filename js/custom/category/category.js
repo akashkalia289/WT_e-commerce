@@ -1,9 +1,11 @@
 import dataObject from '../data-provider/data-object.js';
+import {$} from './../helpers.js';
 
-function loadCategory() {
+export function loadCategory() {
     const selectedCat = String(new URLSearchParams(window.location.search).get('cat'));
     const categoryObject = dataObject[selectedCat]['categories'];
-    let htmlElement = document.getElementById("categories");
+    loadCarosuel(dataObject[selectedCat]['carosuel']);
+    let htmlElement = $("categories");
     let htmlString = '';
     for (let j = 0; j < categoryObject.length; j++) {
         htmlString += `
@@ -60,4 +62,14 @@ function loadCategory() {
     htmlElement.innerHTML = htmlString;
 }
 
-export default loadCategory();
+function loadCarosuel(carItems) {
+    const {path} = carItems;
+    const {pictures} = carItems;
+    let htmlString = '';
+    pictures.forEach((element, index) => {
+        htmlString += `<div class="carousel-item${index === 0 ? " active" : ""}">
+                <img src="${path + element}" class="d-block w-100" alt="...">
+            </div>`
+    });
+    $('carousel-items').innerHTML = htmlString;
+}

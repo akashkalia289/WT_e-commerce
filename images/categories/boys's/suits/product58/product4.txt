@@ -1,0 +1,19 @@
+Color:	Grey
+Style:	Work
+Pattern Type:	Plain
+Details:	Button Front
+Season:	All
+Top Type:	Blazer
+Bottom Type:	Pants
+Neckline:	Lapel
+Sleeve Length:	Long Sleeve
+Sleeve Type:	Regular Sleeve
+Fit Type:	Regular Fit
+Fabric:	Non-Stretch
+Material:	Polyester
+Composition:	100% Polyester
+Care Instructions:	Machine wash or professional dry clean
+Body:	Lined
+Sheer:	No
+
+Price: $90
