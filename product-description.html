@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="module">
         import {load_product, manipulate_quantity, add_to_cart} from './js/custom/product-description/product-description.js';
+        import { get_local_storage_object } from './js/custom/helpers.js';
         document.body.onload = load_product();
         document.getElementById('increase_button').addEventListener('click', () => manipulate_quantity('increase'));
         document.getElementById('decrease_button').addEventListener('click', () => manipulate_quantity('decrease'));
-        document.getElementById('add_to_cart').addEventListener('click', () => add_to_cart());
+        document.getElementById('add_to_cart').addEventListener('click', 
+        () => {
+            const master_obj = get_local_storage_object();
+            master_obj.loggedIn ? add_to_cart() : window.alert("Please login-in to continue") 
+        });
     </script>
     
 </head>
