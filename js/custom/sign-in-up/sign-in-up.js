@@ -65,40 +65,40 @@ export function sign_up() {
 function emptyValValidation(newUserObj) {
   let isValid = true;
   if (newUserObj.firstName == "") {
-    isValid = false;
     window.alert("Please enter your firstname.");
+    return isValid;
   }
   if (newUserObj.lastName == "") {
-    isValid = false;
     window.alert("Please enter your lastname");
+    return isValid;
   }
   if (newUserObj.email == "") {
-    isValid = false;
     window.alert("Please enter your email");
+    return isValid;
   }
   if (newUserObj.pwd == "") {
-    isValid = false;
     window.alert("Please enter your password");
+    return isValid;
   }
   if (newUserObj.house == "") {
-    isValid = false;
     window.alert("Please enter your house");
+    return isValid;
   }
   if (newUserObj.street == "") {
-    isValid = false;
     window.alert("Please enter your street");
+    return isValid;
   }
   if (newUserObj.city == "") {
-    isValid = false;
     window.alert("Please enter your city");
+    return isValid;
   }
   if (newUserObj.state == "") {
-    isValid = false;
     window.alert("Please enter your state");
+    return isValid;
   }
   if (newUserObj.zip == "") {
-    isValid = false;
     window.alert("Please enter your zip");
+    return isValid;
   }
   return isValid;
 }
