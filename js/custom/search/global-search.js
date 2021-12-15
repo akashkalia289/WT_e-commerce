@@ -42,6 +42,6 @@ export function global_search_handler() {
     if (searchValue && String(searchValue).trim().length > 0) {
         window.location.href = `https://wt-ecommerce.netlify.app/global-search.html?query=${searchValue}`
     } else {
-        alert('Please enter a product to srarch!');
+        alert('Please enter a product to search!');
     }
 }
