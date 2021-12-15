@@ -25,7 +25,7 @@ export function global_search() {
                 if (finalSeggrigation.has(key.split("~")[0])) {
                     finalSeggrigation.get(key.split("~")[0]).set(key.split("~")[1], searchResult[key])
                 } else {
-                    cat = new Map();
+                    const cat = new Map();
                     cat.set(key.split("~")[1], searchResult[key]);
                     finalSeggrigation.set(key.split("~")[0], cat);
                 }
