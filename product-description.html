@@ -16,14 +16,34 @@
         document.getElementById('decrease_button').addEventListener('click', () => manipulate_quantity('decrease'));
         document.getElementById('add_to_cart').addEventListener('click', 
         () => {
-            const master_obj = get_local_storage_object();
-            master_obj.loggedIn ? add_to_cart() : window.alert("Please login-in to continue") 
+            add_to_cart()
         });
     </script>
     
 </head>
 
 <body id="home">
+    <!-- Button trigger modal -->
+<button type="button" id="modal-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" hidden="true">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+        </div>
+        <div class="modal-body">
+          Item Added to Cart Successfully!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
             <a href="index.html" class="navbar-brand">
@@ -65,22 +85,6 @@
             </div>
         </div>
     </nav>
-
-    <!--Search Bar-->
-    <section id="search_bar" class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-8">
-                    <input type="text" class="form-control form-control-lg" placeholder="Jean, Jackets and more...">
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <button class="btn btn-dark btn-lg btn-block">
-                        Search
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Product Description -->
     <div class="container my-md-3 ps-md-3">

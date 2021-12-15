@@ -60,5 +60,6 @@ export function add_to_cart() {
             create_cart_item(selectedCat, selectedType, productId, $('quantity').value, $('size').value));
     }
     save_object_to_local_storage(master_obj);
+    $('modal-btn').click();
 
 }

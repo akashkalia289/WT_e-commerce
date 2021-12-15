@@ -19,8 +19,7 @@ export function sign_in() {
       master_obj["loggedIn"] = true;
       master_obj["loggedInUser"] = user;
       save_object_to_local_storage(master_obj);
-      window.location.href =
-        "https://loving-pasteur-f03b72.netlify.app/index.html";
+      window.location.href = document.referrer
     } else {
       // wrong username and password
       alert("Invalid Username and Password");

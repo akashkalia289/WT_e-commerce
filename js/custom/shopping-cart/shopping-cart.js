@@ -55,6 +55,10 @@ export function load_shopping_cart() {
             $('checkout-btn').hidden = true;
         }
 
+    } else {
+        $('cart-items').innerHTML = 'No Items in Cart, Please continue shopping!';
+        $('total-price').hidden = true;
+        $('checkout-btn').hidden = true;
     }
 }
 
