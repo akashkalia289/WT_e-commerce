@@ -3,11 +3,20 @@ import {$} from './../helpers.js';
 
 // to display categories
 export function loadCategory() {
+    // getting category from URL query param
     const selectedCat = String(new URLSearchParams(window.location.search).get('cat'));
+    // getting categories of the type
     const categoryObject = dataObject[selectedCat]['categories'];
+    // loading carosuel
     loadCarosuel(dataObject[selectedCat]['carosuel']);
+
+    // accessing HTML Node from the document
     let htmlElement = $("categories");
+
+    // initializing a local variable
     let htmlString = '';
+
+    // Iterating over all the categories of the selected type and appending to the HTML string
     for (let j = 0; j < categoryObject.length; j++) {
         htmlString += `
         <div class="container my-3">
@@ -59,19 +68,24 @@ export function loadCategory() {
     </div>`;
     }
 
-
+    // Setting innerHTML of the HTML Node to the HTML string
     htmlElement.innerHTML = htmlString;
 }
 
 //show carosuel
 function loadCarosuel(carItems) {
+    // getting image path by destructring
     const {path} = carItems;
+    // getting pictures by destructring
     const {pictures} = carItems;
+    // local variable for HTML string
     let htmlString = '';
+    // looping over the pictures to show to the user
     pictures.forEach((element, index) => {
         htmlString += `<div class="carousel-item${index === 0 ? " active" : ""}">
                 <img src="${path + element}" class="d-block w-100" alt="...">
             </div>`
     });
+    // setting the string to the Node
     $('carousel-items').innerHTML = htmlString;
 }

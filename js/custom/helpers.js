@@ -35,6 +35,28 @@ export function get_image_path_for_a_type(cat, type) {
     return dataObject[cat].categories.find((cat) => cat.keyword === type).imagePath;
 }
 
+export function get_product_details_by_product_id(productId) {
+    const productDetails = {
+        type: null,
+        cat: null,
+        imagePath: null,
+        product: null
+    };
+    Object.keys(dataObject).forEach((type) => {
+        dataObject[type]['categories'].forEach((cat) => {
+            cat.products.forEach((product) => {
+                if (product.productId === productId) {
+                    productDetails.cat = type;
+                    productDetails.type = cat.keyword;
+                    productDetails.imagePath = cat.imagePath;
+                    productDetails.product = product;
+                }
+            });
+        });
+    });
+    return { ...productDetails };
+}
+
 
 //Akash
 export const pwd_salt = "!@#$%^&*&^%$#@!@#$%^1234";

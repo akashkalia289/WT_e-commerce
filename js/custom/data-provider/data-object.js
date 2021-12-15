@@ -1,4 +1,4 @@
-//raw json data
+//JavaScript Object that acts as a data source
 const dataObject = {
     men: {
         title: 'Men',

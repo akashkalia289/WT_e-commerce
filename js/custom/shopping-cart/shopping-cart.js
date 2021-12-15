@@ -2,8 +2,11 @@ import { $, get_image_path_for_a_type, get_local_storage_object, get_product, sa
 
 // to display the shopping cart 
 export function load_shopping_cart() {
+    // getting master object from the storage
     const master_obj = get_local_storage_object();
     const shopping_cart_items = {}
+    // if cart items present, if block will be executed
+    // else show the message
     if (master_obj['cart']) {
         let totalPrice = 0;
         const cart_items = master_obj['cart'];
@@ -71,9 +74,13 @@ export function removeCartItem(index) {
     location.reload();
 }
 
+// proceed to checkout
 export function proceed_to_checkout() {
     const master_obj = get_local_storage_object();
     const {loggedIn} = master_obj;
+    // if loggedIn
+    // show checkout html
+    // else navigate to sign-in
     if (loggedIn) {
         window.location.href="./checkout.html";
     } else {
