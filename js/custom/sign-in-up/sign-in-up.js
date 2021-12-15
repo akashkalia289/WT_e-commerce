@@ -52,10 +52,8 @@ export function sign_up() {
     validateZip(newUserObj.zip) &&
     alreadyPresetUser(newUserObj.email)
   ) {
-    console.log("Form Valid");
     //adding new user info in users object
     users.push(newUserObj);
-    save_object_to_local_storage(master_obj);
     master_obj["loggedIn"] = true;
     master_obj["loggedInUser"] = users[users.length - 1];
     save_object_to_local_storage(master_obj);
