@@ -201,10 +201,10 @@
     <script type="module">
         import { show_user } from './js/custom/user/user.js';
         import { logout } from './js/custom/sign-in-up/sign-in-up.js';
-        import { global_search } from './js/custom/search/global-search.js';
+        import { global_search_handler } from './js/custom/search/global-search.js';
         document.getElementById('user-link').onload = show_user();
         document.getElementById('logout-btn').addEventListener('click', () => logout());
-        document.getElementById('search-btn').addEventListener('click', () => global_search());
+        document.getElementById('search-btn').addEventListener('click', () => global_search_handler());
     </script>
 </body>
 
