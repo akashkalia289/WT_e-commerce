@@ -44,6 +44,8 @@ export function global_search() {
 }
 
 export function global_search_handler() {
+    alert('This feature is in progress');
+    return;
     // getting the input on the index page
     const searchValue = String($('search-inpt').value).toLowerCase();
     // if there is an input in the text field
