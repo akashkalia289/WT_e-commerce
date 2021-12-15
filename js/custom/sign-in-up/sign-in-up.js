@@ -24,6 +24,8 @@ export function sign_in() {
       // wrong username and password
       alert("Invalid Username and Password");
     }
+  } else {
+    alert("Invalid Username and Password");
   }
 }
 
